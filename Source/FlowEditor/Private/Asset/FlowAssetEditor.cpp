@@ -186,6 +186,8 @@ void FFlowAssetEditor::SaveAsset_Execute()
 {
 	DoPresaveAssetUpdate();
 
+	ValidateAsset_Internal();
+	
 	FAssetEditorToolkit::SaveAsset_Execute();
 }
 void FFlowAssetEditor::SaveAssetAs_Execute()
