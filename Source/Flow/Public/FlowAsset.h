@@ -213,6 +213,9 @@ public:
 	UFUNCTION(BlueprintPure, Category = "FlowAsset")
 	virtual UFlowNode* GetDefaultEntryNode() const;
 
+	// Gathers all of the nodes that are connected to the Start & Custom Inputs of the flow graph
+	TArray<UFlowNode*> GatherNodesConnectedToAllInputs() const;
+
 	UFUNCTION(BlueprintPure, Category = "FlowAsset", meta = (DeterminesOutputType = "FlowNodeClass"))
 	TArray<UFlowNode*> GetNodesInExecutionOrder(UFlowNode* FirstIteratedNode, const TSubclassOf<UFlowNode> FlowNodeClass);
 
